@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="sidebar " id="sidebar">
+      <div class="sidebar" id="sidebar">
         <div class="sidebar_container">
           <div class="sidebar_user">
             <div class="sidebar_user-item">
@@ -94,17 +94,70 @@
         <header>
           <h2>
             Mauricio, <span id="saudacao">boa noite!</span> Seja Bem-vindo ao
-            Crismar - São Pe Pior (Administrativo)
+            Crismar - São Pe Pior (Área Administrativa)
           </h2>
         </header>
         <main>
-          <section class="section active" id="sct_home">
+          <section class="section" id="sct_home">
             <div class="home_container">
               <div class="home_item-img"></div>
             </div>
           </section>
-          <section class="section" id="sct_catequizando">
-            Catequizando - Inscrição
+          <section class="section active" id="sct_catequizando">
+            <div class="catequizando_container">
+              <p>Catequizando - Inscrição</p>
+              <p></p>
+              <div class="catequizando_filter">
+                <button id="btn_catequizando-inscricao">
+                  <ion-icon name="add-outline"></ion-icon>
+                  <span>Inscrição</span>
+                </button>
+                <div class="catequizando_search">
+                  <ion-icon name="search-outline"></ion-icon>
+                  <input
+                    type="text"
+                    id="seach_catequizando"
+                    placeholder="Catequizando..."
+                  />
+                </div>
+              </div>
+
+              <div class="catequizando_table">
+                <table class="catequizando_table-items" id="catequizando-table">
+                  <tr>
+                    <th class="id-col">ID</th>
+                    <th class="sacramento-col">Sacramento</th>
+                    <th class="nome-col">Nome Completo</th>
+                    <th class="data-nascimento-col">Data de Nascimento</th>
+                    <th class="telefone-col">Telefone</th>
+                    <th class="email-col">E-mail</th>
+                    <th class="responsavel-col">Responsável</th>
+                    <th class="observacao-col">Observação</th>
+                    <th class="situacao-col">Situação</th>
+                    <th class="acoes-col">Ações</th>
+                  </tr>
+                  <tr>
+                    <td>0001</td>
+                    <td>Sacramento da Confirmação</td>
+                    <td>Mauricio Rodrigues</td>
+                    <td>09/05/1988</td>
+                    <td>(19) 971366821</td>
+                    <td>mauricio.rodrigues090509@gmail.com</td>
+                    <td>Mauricio Rodrigues</td>
+                    <td>Sem Observações pertinentes</td>
+                    <td>Ativo</td>
+                    <td class="acoes-col">
+                      <button id="btn_catequizando-edit">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                      </button>
+                      <button id="btn_catequizando-delete">
+                        <ion-icon name="trash-outline"></ion-icon>
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </section>
           <section class="section" id="sct_encontro">Encontro</section>
           <section class="section" id="sct_turma">Turma</section>
@@ -119,9 +172,10 @@
         <footer><p>Crismar São Pe Pio - Direitos Reservados 2024</p></footer>
       </div>
     </div>
-
+<!-- Modal Inscrição -->
     <!-- SCRIPTS (JS E IONICONS) -->
     <script src="./JS/script_index.js"></script>
+    <script src="./JS/script_catequizando.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

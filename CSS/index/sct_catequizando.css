@@ -1,0 +1,150 @@
+.catequizando_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.catequizando_container p {
+  font-weight: bold;
+  padding: 1rem;
+  width: 100%;
+}
+
+.catequizando_filter {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.catequizando_filter button {
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  border-radius: .3rem;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  gap: 1rem;
+}
+
+.catequizando_filter button span, .catequizando_filter button ion-icon {
+  color: var(--cor-fonte-branco);
+}
+
+.catequizando_filter button:hover {
+  opacity: .9;
+}
+
+.catequizando_search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: .1rem solid #ccc;
+  padding: 1rem;
+  border-radius: .3rem;
+  box-shadow: var(--sombra);
+  width: 40rem;
+}
+
+.catequizando_search input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.catequizando_table {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 3rem;
+}
+
+.catequizando_table-items {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Ajusta a largura das colunas automaticamente */
+}
+
+.catequizando_table-items th, .catequizando_table-items td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  font-size: 1.3rem;
+}
+
+.catequizando_table-items td {
+  cursor: pointer;
+}
+
+
+.catequizando_table-items th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.catequizando_table-items td {
+ text-align: center; /* Permite que o texto quebre em várias linhas, se necessário */
+}
+
+/* Estilos específicos para colunas */
+.catequizando_table-items .id-col {
+  width: 50px;
+}
+
+.catequizando_table-items .sacramento-col {
+  width: 250px;
+}
+
+.catequizando_table-items .nome-col {
+  width: 150px;
+}
+
+.catequizando_table-items .data-nascimento-col {
+  width: 100px;
+}
+
+.catequizando_table-items .telefone-col {
+  width: 120px;
+}
+
+.catequizando_table-items .email-col {
+  width: 250px;
+}
+
+.catequizando_table-items .responsavel-col {
+  width: 150px;
+}
+
+.catequizando_table-items .observacao-col {
+  width: 300px;
+}
+
+.catequizando_table-items .situacao-col {
+  width: 80px;
+}
+
+.catequizando_table-items .acoes-col {
+  width: 70px; /* Ajuste a largura conforme necessário */
+  text-align: center;
+}
+
+.catequizando_table-items .acoes-col button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.catequizando_table-items .acoes-col ion-icon {
+  cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse sobre os ícones */
+  margin: 0 5px; /* Ajusta o espaçamento entre os ícones */
+  font-size: 1.2em; /* Ajusta o tamanho dos ícones */
+  transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+}
+#btn_catequizando-delete ion-icon {
+  color:#dc3545;
+}
+
+
+

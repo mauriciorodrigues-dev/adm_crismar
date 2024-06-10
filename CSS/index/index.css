@@ -61,6 +61,7 @@ body {
   border-radius: 1rem;
   padding: var(--padd);
   display: none;
+  font-family: var( --font-secundaria);
 }
 
 .section.active {

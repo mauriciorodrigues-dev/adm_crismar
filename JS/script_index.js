@@ -1,45 +1,45 @@
 // TROCA DE ABAS
-document.addEventListener("DOMContentLoaded", function () {
-  // Mapeie os botões para suas seções correspondentes
-  const buttonSectionMap = {
-    btn_home: "sct_home",
-    btn_catequizando: "sct_catequizando",
-    btn_encontro: "sct_encontro",
-    btn_turma: "sct_turma",
-    btn_presenca: "sct_presenca",
-    btn_catequista: "sct_catequista",
-    btn_biblioteca: "sct_biblioteca",
-    btn_aniversariantes: "sct_aniversariantes",
-    btn_dashboard: "sct_dashboard",
-  };
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Mapeie os botões para suas seções correspondentes
+//   const buttonSectionMap = {
+//     btn_home: "sct_home",
+//     btn_catequizando: "sct_catequizando",
+//     btn_encontro: "sct_encontro",
+//     btn_turma: "sct_turma",
+//     btn_presenca: "sct_presenca",
+//     btn_catequista: "sct_catequista",
+//     btn_biblioteca: "sct_biblioteca",
+//     btn_aniversariantes: "sct_aniversariantes",
+//     btn_dashboard: "sct_dashboard",
+//   };
 
-  // Função para alternar seções
-  function switchSection(activeButtonId) {
-    // Remover a classe active de todos os botões e seções
-    document
-      .querySelectorAll(".sidebar_button")
-      .forEach((btn) => btn.classList.remove("active"));
-    document
-      .querySelectorAll(".section")
-      .forEach((sec) => sec.classList.remove("active"));
+//   // Função para alternar seções
+//   function switchSection(activeButtonId) {
+//     // Remover a classe active de todos os botões e seções
+//     document
+//       .querySelectorAll(".sidebar_button")
+//       .forEach((btn) => btn.classList.remove("active"));
+//     document
+//       .querySelectorAll(".section")
+//       .forEach((sec) => sec.classList.remove("active"));
 
-    // Adicionar a classe active ao botão e seção ativos
-    document.getElementById(activeButtonId).classList.add("active");
-    document
-      .getElementById(buttonSectionMap[activeButtonId])
-      .classList.add("active");
-  }
+//     // Adicionar a classe active ao botão e seção ativos
+//     document.getElementById(activeButtonId).classList.add("active");
+//     document
+//       .getElementById(buttonSectionMap[activeButtonId])
+//       .classList.add("active");
+//   }
 
-  // Adicionar event listeners a todos os botões
-  Object.keys(buttonSectionMap).forEach((buttonId) => {
-    document.getElementById(buttonId).addEventListener("click", function () {
-      switchSection(buttonId);
-    });
-  });
+//   // Adicionar event listeners a todos os botões
+//   Object.keys(buttonSectionMap).forEach((buttonId) => {
+//     document.getElementById(buttonId).addEventListener("click", function () {
+//       switchSection(buttonId);
+//     });
+//   });
 
-  // Exibir a primeira seção por padrão
-  switchSection("btn_home");
-});
+//   // Exibir a primeira seção por padrão
+//   switchSection("btn_home");
+// });
 
 // SAUDAÇÃO
 
