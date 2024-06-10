@@ -1,0 +1,4 @@
+@import './CSS_GLOBAL/fonts.css';
+@import './CSS_GLOBAL/variaveis.css';
+@import './CSS/index/index.css';
+@import './CSS/index/sidebar.css';

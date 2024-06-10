@@ -1,0 +1,9 @@
+:root {
+  --sombra: .1rem .1rem 1rem #ccc;
+  --cor-fundo-branco: #fff;
+  --cor-fundo-escuro: #1e1e1e;
+  --cor-fonte-branco: #fff;
+  --cor-fonte-escuro: #1e1e1e;
+  --padd: 1rem;
+  --fonte-principal: "Montserrat", sans-serif;
+}
