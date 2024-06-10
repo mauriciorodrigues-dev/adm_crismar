@@ -64,19 +64,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Sidebar
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const sidebar = document.getElementById("sidebar");
   const toggleButton = document.getElementById("sdb");
   const sidebarButtons = document.querySelectorAll(".sidebar_button");
 
-  toggleButton.addEventListener("click", function() {
-      // Alternar a largura da sidebar
-      sidebar.classList.toggle("small");
+  toggleButton.addEventListener("click", function () {
+    // Alternar a largura da sidebar
+    sidebar.classList.toggle("small");
 
-      // Alternar a classe btn-active em todos os botões da sidebar
-      sidebarButtons.forEach(button => {
-          button.classList.toggle("btn-active");
-      });
+    // Alternar a classe btn-active em todos os botões da sidebar
+    sidebarButtons.forEach((button) => {
+      button.classList.toggle("btn-active");
+    });
   });
 });
+
 

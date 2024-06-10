@@ -1,17 +1,14 @@
-const buttons = document.querySelectorAll('button');
+// Abrir Modal
+const openModalButton = document.querySelector("#btn_catequizando-inscricao");
+const closeModalButton = document.querySelector("#close-modal");
+const modal = document.querySelector("#modal");
+const fade = document.querySelector("#fade");
 
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        switch (button.id) {
-            case 'btn_catequizando-inscricao':
-                alert('Função: Inscrição');
-                break;
-            case 'btn_catequizando-edit':
-                alert('Função: Editar');
-                break;
-            case 'btn_catequizando-delete':
-                alert('Função: Excluir');
-                break;
-        }
-    });
+const toggleModal = () => {
+  modal.classList.toggle("hide");
+  fade.classList.toggle("hide");
+};
+
+[openModalButton, closeModalButton, fade].forEach((el) => {
+  el.addEventListener("click", () => toggleModal());
 });
