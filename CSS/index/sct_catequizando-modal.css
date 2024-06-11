@@ -1,26 +1,7 @@
-@import '../../CSS_GLOBAL/fonts.css';
+/* Estilos gerais */
 body {
   font-family: 'Poppins', sans-serif;
 }
-
-.container-modal {
-  width: 50%;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #cac8c8;
-  min-height: 40rem;
-  box-shadow: 10px 10px 15px #ccc;
-}
-
-.container-modal h2 {
-  background-color: #4f94e2;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-
 
 button {
   padding: 10px;
@@ -34,26 +15,78 @@ button:hover {
   background-color: #45a049;
 }
 
-.tab {
-  overflow: hidden;
-}
-
 input, select {
   border: none;
   outline: 1px solid #ccc;
   border-radius: .4rem;
   padding: .5rem .4rem;
-
-
 }
 
+/* Estilos para os modais */
+.modal-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #cac8c8;
+  min-height: 40rem;
+}
 
-.tablinks {
-  width: 200px;
-  color: black;
-  }
-  
-  .tab button {
+.container-modal h2 {
+  background-color: #4f94e2;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#fade, .container-modal, #modal1 {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#fade {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+
+.container-modal.hide, #modal1.hide, #fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal1 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#modal1.hide {
+  top: 0;
+}
+
+/* Estilos para abas */
+.tab {
+  overflow: hidden;
+}
+
+.tab button {
   background-color: inherit;
   float: left;
   outline: none;
@@ -80,10 +113,7 @@ input, select {
   min-height: 40rem;
 }
 
-.responsavel {
-  margin-bottom: 20px;
-}
-
+/* Estilos para os campos do formulário */
 .form_group {
   display: flex;
   width: 100%;
@@ -109,34 +139,4 @@ input, select {
 
 .width-default {
   min-width: 9rem;
-}
-
-
-#modal {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 1.2rem;
-  border-radius: 0.5rem;
-  z-index: 10;
-
-}
-
-#fade,
-#modal {
-  transition: 0.5s;
-  opacity: 1;
-  pointer-events: all;
-}
-
-
-#modal.hide,
-#fade.hide {
-  opacity: 0;
-  pointer-events: none;
-}
-
-#modal.hide {
-  top: 0;
 }

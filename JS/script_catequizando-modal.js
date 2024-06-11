@@ -1,4 +1,5 @@
-document.getElementById('dataNascimento').addEventListener('change', function() {
+// Calcula a idade com base na data de nascimento
+document.getElementById("dataNascimento").addEventListener("change", function () {
   const birthDate = new Date(this.value);
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
@@ -6,15 +7,16 @@ document.getElementById('dataNascimento').addEventListener('change', function() 
   if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
       age--;
   }
-  document.getElementById('idade').value = age;
+  document.getElementById("idade").value = age;
 });
 
+// Adiciona mais campos de responsável
 function adicionarResponsavel() {
-  const container = document.getElementById('responsaveisContainer');
-  const responsavelCount = container.getElementsByClassName('responsavel').length + 1;
+  const container = document.getElementById("responsaveisContainer");
+  const responsavelCount = container.getElementsByClassName("responsavel").length + 1;
 
-  const newResponsavel = document.createElement('div');
-  newResponsavel.className = 'responsavel form_group';
+  const newResponsavel = document.createElement("div");
+  newResponsavel.className = "responsavel form_group";
 
   newResponsavel.innerHTML = `
       <div class="form_group-item">
@@ -48,7 +50,7 @@ function adicionarResponsavel() {
   container.appendChild(newResponsavel);
 }
 
-
+// Troca de abas no modal
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -57,13 +59,14 @@ function openTab(evt, tabName) {
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].classList.remove("active");
   }
   document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+  evt.currentTarget.classList.add("active");
 }
 
-// Abre a primeira aba por padrão
-document.getElementById("defaultOpen").click();
-
-
+// JavaScript para ativar a aba padrão
+document.addEventListener("DOMContentLoaded", function () {
+  // Simular um clique no botão da aba padrão
+  document.getElementById("defaultOpen").click();
+});
