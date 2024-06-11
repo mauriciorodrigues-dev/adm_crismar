@@ -1,0 +1,13 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-secundaria);
+}
+:root{
+  font-size:62.5%; /* 1rem = 10px */
+}
+body{
+  font-size: 1.6rem;
+}

@@ -1,9 +1,9 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Cadastro de Catequizando</title>
     <link rel="stylesheet" href="../CSS/index/sct_catequizando-modal.css" />
     <link rel="icon" href="data:," />
     <script
@@ -11,270 +11,175 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body> -->
-<!-- Modal Inscrição -->
+  <body>
+    <!-- Modal Inscrição -->
 
-<div id="modal1" class="modal-container hide">
-  <div class="tab">
-    <button
-      class="tablinks"
-      onclick="openTab(event, 'Identificacao')"
-      id="defaultOpen"
-    >
-      Identificação
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'Catequizando')">
-      Catequizando
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'Sacramento')">
-      Sacramento
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'Pais')">
-      Pais/Responsáveis
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'Localizacao')">
-      Localização
-    </button>
-    <button class="tablinks" onclick="openTab(event, 'Observacao')">
-      Observação
-    </button>
-  </div>
-
-  <form id="catequeseForm" action="process_form.php" method="post">
-    <div id="Identificacao" class="tabcontent">
-      <h2>Registro</h2>
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="id">Registro</label>
-          <input class="width-default" id="id" name="id" type="text" />
+    <div id="modal1" class="modal-container hide">
+      <div class="modal-header">
+        <div class="grupo-header">
+          <div id="img-modal">
+            <img src="../img/modal-img/children.png" alt="Imagem de crianças" />
+          </div>
+          <h2>Cadastro de Catequizando</h2>
         </div>
-        <div class="form_group-item">
-          <label for="apto_sacramento">Sacramento</label>
-          <select name="apto_sacramento" id="apto_sacramento">
-            <option value="batismo">Batismo</option>
-            <option value="primeira_eucaristia">Primeira Eucaristia</option>
-            <option value="perseverança">Perseverança</option>
-            <option value="crisma">Sacramento da Crisma</option>
-            <option value="adulto">Sem Sacramento - Formação Adulto</option>
-          </select>
-        </div>
-        <div class="form_group-item">
-          <label for="turma">Turma</label>
-          <select name="turma" id="turma">
-            <option value="Tbatismo">Batismo</option>
-            <option value="Tprimeira_eucaristia">Primeira Eucaristia</option>
-            <option value="Tperseverança">Perseverança</option>
-            <option value="Tcrisma">Sacramento da Crisma</option>
-            <option value="Tadulto">Sem Sacramento - Formação Adulto</option>
-          </select>
-        </div>
-        <div class="form_group-item">
-          <label for="catequista">Catequista</label>
-          <select name="catequista" id="catequista">
-            <option value="#">Catequista</option>
-          </select>
-        </div>
+        <button id="close-modal1"><i class="fa-solid fa-xmark"></i></button>
       </div>
-    </div>
-
-    <!-- Aba Catequizando -->
-    <div id="Catequizando" class="tabcontent">
-      <h2>Dados Iniciais</h2>
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="genero">Gênero:</label>
-          <select class="width-default" id="genero" name="genero">
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="nome">Nome Completo:</label>
-          <input type="text" id="nome" name="nome" />
-        </div>
-      </div>
-
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="dataNascimento">Data de Nascimento:</label>
-          <input
-            class="width-default"
-            type="date"
-            id="dataNascimento"
-            name="dataNascimento"
-          />
-        </div>
-        <div class="form_group-item">
-          <label for="idade">Idade:</label>
-          <input type="number" id="idade" name="idade" readonly />
-        </div>
-      </div>
-    </div>
-
-    <!-- Aba Sacramento -->
-    <div id="Sacramento" class="tabcontent">
-      <h2>Dados sobre Sacramentos Recebidos</h2>
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="dataBatismo">Data Batismo:</label>
-          <input
-            class="width-default"
-            type="date"
-            id="dataBatismo"
-            name="dataBatismo"
-          />
-        </div>
-        <div class="form_group-item">
-          <label for="paroquiaBatismo">Paróquia:</label>
-          <input type="text" id="paroquiaBatismo" name="paroquiaBatismo" />
-        </div>
-      </div>
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="dataEucaristia">Data 1ª Eucaristia:</label>
-          <input
-            class="width-default"
-            type="date"
-            id="dataEucaristia"
-            name="dataEucaristia"
-          />
-        </div>
-        <div class="form_group-item">
-          <label for="paroquiaEucaristia">Paróquia:</label>
-          <input
-            type="text"
-            id="paroquiaEucaristia"
-            name="paroquiaEucaristia"
-          />
-        </div>
-      </div>
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="semSacramento">Não recebeu nenhum sacramento:</label>
-          <input type="checkbox" id="semSacramento" name="semSacramento" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Aba Pais -->
-    <div id="Pais" class="tabcontent">
-      <h2>Pais/Responsáveis e Contato</h2>
-      <div id="responsaveisContainer">
-        <div class="responsavel">
-          <div class="form_group">
-            <div class="form_group-item">
-              <label for="responsavelTipo1">Grau de Parentesco:</label>
-              <select
-                class="width-default"
-                name="responsavelTipo[]"
-                id="responsavelTipo1"
-              >
-                <option value="pai">Pai</option>
-                <option value="mae">Mãe</option>
-                <option value="tio">Tio</option>
-                <option value="tia">Tia</option>
-                <option value="avoM">Avô</option>
-                <option value="avoF">Avó</option>
-                <option value="irmao">Irmão</option>
-                <option value="irma">Irmã</option>
-                <option value="outro">Outro</option>
-              </select>
+      <div class="modal-body">
+        <div class="container">
+          <form action="" id="form-inscricao" class="form-inscricao">
+            <h3 class="titulo">Identificação</h3>
+            <div class="grupo">
+              <h5>Dados Iniciais</h5>
+              <div class="grupo-items">
+                <div class="item">
+                  <label for="nomeCompleto">Nome Completo do Catequizando</label>
+                  <input type="text" name="nomeCompleto" id="nomeCompleto" />
+                </div>
+              </div>
+              <div class="grupo-items">
+                <div class="item">
+                  <label for="genero">Gênero</label>
+                  <select name="genero" id="genero">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                  </select>
+                </div>
+                <div class="item">
+                  <label for="dtNascimento">Data de Nascimento</label>
+                  <input type="date" name="dtNascimento" id="dtNascimento" />
+                </div>
+                <div class="item">
+                  <label for="idade">Idade</label>
+                  <input type="number" name="idade" id="idade" />
+                </div>
+              </div>
             </div>
-            <div class="form_group-item">
-              <label for="nomeResponsavel1">Nome Responsável</label>
-              <input
-                type="text"
-                id="nomeResponsavel1"
-                style="width: 20rem"
-                name="nomeResponsavel[]"
-              />
+            <div class="grupo">
+              <h5>Sacramentos</h5>
+              <div class="grupo-items">
+                <div class="item">
+                  <label for="sacramento">Sacramento</label>
+                  <select name="sacramento" id="sacramento">
+                    <option value="eucaristia">Primeira Eucaristia</option>
+                    <option value="crisma">Sacramento da Confirmação (Crisma)</option>
+                    <option value="adulto">Catequese para Adultos</option>
+                  </select>
+                </div>
+                <div class="item">
+                  <label for="turma">Turma Inserida</label>
+                  <select name="turma" id="turma">
+                    <option value="tEucaristia1">Turma 1 - Primeira Eucaristia 1ª Etapa</option>
+                    <option value="tEucaristia2">Turma 2 - Primeira Eucaristia 2ª Etapa</option>
+                    <option value="tPerseverança">Turma 1 - Perseverança</option>
+                    <option value="tCrisma">Turma 1 -Sacramento da Confirmação (Crisma)</option>
+                    <option value="tAdulto">Turma 1 - Catequese para Adultos</option>
+                  </select>
+                </div>
+                <div class="item">
+                  <label for="catequista">Catequista</label>
+                  <select name="catequista" id="catequista">
+                    <option value="maria socorro">Maria Socorro</option>
+                    <option value="maria vitoria">Maria Vitória</option>
+                    <option value="cristiane">Cristiane</option>
+                    <option value="mauricio rodrigues">Mauricio Rodrigues</option>
+                    <option value="sem catequista">Sem catequista...</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <div class="form_group-item">
-              <label for="responsavelTelefone1">Telefone:</label>
-              <input
-                type="tel"
-                id="responsavelTelefone1"
-                name="responsavelTelefone[]"
-              />
+            <h3 class="titulo">Localização</h3>
+            <div class="grupo">
+              <h5>Local onde mora</h5>
+              <div class="grupo-items">
+                <div class="item">
+                  <label for="endereco">Endereço</label>
+                  <input type="text" name="endereco" id="endereco" />
+                </div>
+                <div class="item">
+                  <label for="num">Número</label>
+                  <input type="text" name="num" id="num" />
+                </div>
+                <div class="item">
+                  <label for="bairro">Bairro</label>
+                  <input type="text" name="bairro" id="bairro" />
+                </div>
+                <div class="item">
+                  <label for="cidade">Cidade</label>
+                  <input type="text" name="cidade" id="cidade" />
+                </div>
+              </div>
             </div>
-            <div class="form_group-item">
-              <label for="email1">E-mail:</label>
-              <input
-                style="width: 20rem"
-                type="email"
-                id="email1"
-                name="email[]"
-              />
+          </form>
+        </div>
+        <div class="container">
+          <h3 class="titulo">Pais e Responsáveis</h3>
+          <div class="grupo">
+            <h5>Informações de Parentesco</h5>
+            <div class="grupo-items">
+              <div class="item">
+                <label for="responsaveis">Parentesco</label>
+                <select name="responsaveis" id="responsaveis">
+                  <option value="pai">Pai</option>
+                  <option value="mae">Mãe</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="item">
+                <label for="responsavel">Nome do Responsável</label>
+                <input type="text" name="responsavel" id="responsavel" />
+              </div>
+              <div class="item">
+                <label for="contato">Contato</label>
+                <input type="text" name="contato" id="contato" />
+              </div>
+              <div class="item">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" />
+              </div>
+            </div>
+            <p class="information">Para mais contatos, insira no campo "Observação"</p>
+          </div>
+          <h3 class="titulo">Sacramentos Recebidos</h3>
+          <div class="grupo">
+            <h5>Informações sobre os Sacramentos Recebidos</h5>
+            <div class="grupo-items">
+              <div class="item">
+                <label for="dtBatismo">Data Batismo</label>
+                <input type="date" name="dtBatismo" id="dtBatismo" />
+              </div>
+              <div class="item">
+                <label for="lcBatismo">Igreja</label>
+                <input type="text" name="lcBatismo" id="lcBatismo" />
+              </div>
+            </div>
+            <div class="grupo-items">
+              <div class="item">
+                <label for="dtEucaristia">Data 1ª Eucaristia</label>
+                <input type="date" name="dtEucaristia" id="dtEucaristia" />
+              </div>
+              <div class="item">
+                <label for="lcEucaristia">Igreja</label>
+                <input type="text" name="lcEucaristia" id="lcEucaristia" />
+              </div>
+            </div>
+            <h3 class="titulo">Observação</h3>
+            <div class="grupo">
+              <div class="grupo-items">
+                <div class="item">
+                  <label for="obs">Insira informação/observação relevante</label>
+                  <textarea name="obs" id="obs"></textarea>
+                </div>
+                <div class="item">
+                  <button class="button" id="btnCadastrar">Cadastrar Catequizando</button>
+                  <button class="button" id="btnLimpar">Limpar Formulário</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <button type="button" onclick="adicionarResponsavel()">
-        Adicionar mais campo
-      </button>
     </div>
 
-    <!-- Aba Localizacao -->
-    <div id="Localizacao" class="tabcontent">
-      <h2>Localização</h2>
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="endereco">Endereço:</label>
-          <input
-            style="width: 25rem"
-            type="text"
-            id="endereco"
-            name="endereco"
-          />
-        </div>
-        <div class="form_group-item">
-          <label for="numero">Número:</label>
-          <input type="text" id="numero" name="numero" />
-        </div>
-        <div class="form_group-item">
-          <label for="bairro">Bairro:</label>
-          <input type="text" id="bairro" name="bairro" />
-        </div>
-        <div class="form_group-item">
-          <label for="cidade">Cidade:</label>
-          <input type="text" id="cidade" name="cidade" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Aba Observacao -->
-    <div id="Observacao" class="tabcontent">
-      <h2>Observação</h2>
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="observacao">Observação:</label>
-          <textarea
-            style="width: 30rem"
-            id="observacao"
-            name="observacao"
-          ></textarea>
-        </div>
-      </div>
-      <div class="form_group">
-        <div class="form_group-item">
-          <label for="situacao">Situação:</label>
-          <select class="width-default" id="situacao" name="situacao">
-            <option value="ativo">Ativo</option>
-            <option value="inativo">Inativo</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <button type="submit">Enviar</button>
-    <button id="close-modal1" type="button">Fechar</button>
-  </form>
-</div>
-
-<!-- 
     <script src="../JS/script_catequizando-modal.js"></script>
   </body>
-</html> -->
+</html>

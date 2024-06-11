@@ -19,12 +19,12 @@ body {
   );
 }
 
-.container {
+.container-index {
   width: 85%;
   margin: 0 auto;
   height: 100%;
   display: flex;
-  /* background: #e2e2e2; */
+  background: #e2e2e2;
 }
 
 .main-content {
@@ -44,7 +44,7 @@ body {
 
 }
 
-.container .main-content header .title {
+.container-index .main-content header .title {
   text-align: center;
 }
 

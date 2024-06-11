@@ -94,6 +94,7 @@ function loadHTML(url, elementId, callback) {
   xhr.send();
 }
 
+
 // Função para abrir o modal
 function openModal(modalId) {
   document.getElementById(modalId).classList.remove("hide");
